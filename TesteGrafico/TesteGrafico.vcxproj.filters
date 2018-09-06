@@ -51,5 +51,14 @@
     <Image Include="img\nave.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="img\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\client_bkg.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\naveElus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
