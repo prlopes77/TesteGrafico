@@ -60,5 +60,17 @@
     <Image Include="img\naveElus.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="img\projAtt.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\icon_game.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\snowflake.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
