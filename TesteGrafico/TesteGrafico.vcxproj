@@ -163,12 +163,18 @@
   <ItemGroup>
     <Image Include="..\..\client_bkg.bmp" />
     <Image Include="..\..\icon_game.bmp" />
+    <Image Include="img\alcohol.bmp" />
+    <Image Include="img\battery.bmp" />
     <Image Include="img\bitmap1.bmp" />
     <Image Include="img\bitmap2.bmp" />
+    <Image Include="img\defender.bmp" />
+    <Image Include="img\life.bmp" />
     <Image Include="img\nave.bmp" />
     <Image Include="img\naveElus.bmp" />
     <Image Include="img\projAtt.bmp" />
+    <Image Include="img\shield-14.bmp" />
     <Image Include="img\snowflake.bmp" />
+    <Image Include="img\velocity.bmp" />
     <Image Include="small.ico" />
     <Image Include="TesteGrafico.ico" />
   </ItemGroup>

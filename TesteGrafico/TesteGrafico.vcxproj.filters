@@ -72,5 +72,23 @@
     <Image Include="img\snowflake.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="img\shield-14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\battery.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\velocity.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\alcohol.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\life.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\defender.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
