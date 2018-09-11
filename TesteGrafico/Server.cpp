@@ -30,8 +30,8 @@ void setupGame(Game * gameShared)
 	{
 		BasicInvader nave;
 
-		nave.box.dimension.width = BASIC_INVADER_BITMAP_WIDTH;
-		nave.box.dimension.height = BASIC_INVADER_BITMAP_HEIGHT;
+		nave.box.dimension.width = BASIC_INVADER_WIDTH;
+		nave.box.dimension.height = BASIC_INVADER_HEIGHT;
 		nave.box.position.x = ((i + 1) * nave.box.dimension.width) + ((i + 1) * SHIP_SPACING);
 		nave.box.position.y = LIM_TOP;
 		nave.currentDirection = Right;
@@ -47,8 +47,8 @@ void setupGame(Game * gameShared)
 	{
 		ElusiveInvader nave;
 
-		nave.box.dimension.width = ELUSIVE_INVADER_BITMAP_WIDTH;
-		nave.box.dimension.height = ELUSIVE_INVADER_BITMAP_HEIGHT;
+		nave.box.dimension.width = ELUSIVE_INVADER_WIDTH;
+		nave.box.dimension.height = ELUSIVE_INVADER_HEIGHT;
 		nave.box.position.x = ((i + 1) * nave.box.dimension.width) + ((i + 1) * SHIP_SPACING);
 		nave.box.position.y = LIM_TOP * nave.box.dimension.height;
 		nave.currentDirection = (Direction) (rand() % NumberOfDirections);
@@ -66,8 +66,8 @@ void setupGame(Game * gameShared)
 	{
 		Defender defender;
 
-		defender.box.dimension.width = DEFENDER_BITMAP_WIDTH;
-		defender.box.dimension.height = DEFENDER_BITMAP_HEIGHT;
+		defender.box.dimension.width = DEFENDER_WIDTH;
+		defender.box.dimension.height = DEFENDER_HEIGHT;
 		defender.box.position.x = ((i + 1) * (game.defenders[i].box.dimension.width)) + (i + 1) * SHIP_SPACING;
 		defender.box.position.y = LIM_BOTTOM - 3 * game.defenders[i].box.dimension.height;
 		defender.speed = DEFENDER_SPEED;
@@ -82,8 +82,8 @@ void setupGame(Game * gameShared)
 	{
 		Shield shield;
 
-		shield.box.dimension.width = SHIELD_BITMAP_WIDTH;
-		shield.box.dimension.height = SHIELD_BITMAP_HEIGHT;
+		shield.box.dimension.width = SHIELD_WIDTH;
+		shield.box.dimension.height = SHIELD_HEIGHT;
 		shield.box.position.x = ((i + 1) * game.shields[i].box.dimension.width) + ((i + 1) * SHIELD_SPACING);;
 		shield.box.position.y = 0.81 * LIM_BOTTOM;
 		shield.lives = SHIELD_LIVES;

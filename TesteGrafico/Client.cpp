@@ -337,9 +337,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.basicInvaders[i].box.position.x, 
 			game.basicInvaders[i].box.position.y, 
-			BASIC_INVADER_BITMAP_WIDTH, BASIC_INVADER_BITMAP_HEIGHT,
+			BASIC_INVADER_WIDTH, BASIC_INVADER_HEIGHT,
 			auxRenderDC, 0, 0,
-			BASIC_INVADER_BITMAP_WIDTH, BASIC_INVADER_BITMAP_HEIGHT,
+			BASIC_INVADER_WIDTH, BASIC_INVADER_HEIGHT,
 			(RGB(255, 255, 255)));
 	}
 
@@ -352,9 +352,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.elusiveInvaders[i].box.position.x, 
 			game.elusiveInvaders[i].box.position.y, 
-			ELUSIVE_INVADER_BITMAP_WIDTH, ELUSIVE_INVADER_BITMAP_HEIGHT,
+			ELUSIVE_INVADER_WIDTH, ELUSIVE_INVADER_HEIGHT,
 			auxRenderDC, 0, 0, 
-			ELUSIVE_INVADER_BITMAP_WIDTH, ELUSIVE_INVADER_BITMAP_HEIGHT,
+			ELUSIVE_INVADER_WIDTH, ELUSIVE_INVADER_HEIGHT,
 			(RGB(255, 255, 255)));
 	}
 
@@ -387,9 +387,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.powerUp.box.position.x, 
 			game.powerUp.box.position.y, 
-			POWERUP_BITMAP_WIDTH, POWERUP_BITMAP_HEIGHT,
+			POWERUP_WIDTH, POWERUP_HEIGHT,
 			auxRenderDC, 0, 0, 
-			POWERUP_BITMAP_WIDTH, POWERUP_BITMAP_HEIGHT,
+			POWERUP_WIDTH, POWERUP_HEIGHT,
 			(RGB(255, 255, 255)));
 	}
 
@@ -402,9 +402,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.bombs[i].box.position.x, 
 			game.bombs[i].box.position.y, 
-			BOMB_BITMAP_WIDTH, BOMB_BITMAP_HEIGHT,
+			BOMB_WIDTH, BOMB_HEIGHT,
 			auxRenderDC, 0, 0, 
-			BOMB_BITMAP_WIDTH, BOMB_BITMAP_HEIGHT,
+			BOMB_WIDTH, BOMB_HEIGHT,
 			(RGB(255, 255, 255)));
 	}
 
@@ -417,9 +417,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.shots[i].box.position.x, 
 			game.shots[i].box.position.y, 
-			SHOT_BITMAP_WIDTH, SHOT_BITMAP_HEIGHT,
+			SHOT_WIDTH, SHOT_HEIGHT,
 			auxRenderDC, 0, 0, 
-			SHOT_BITMAP_WIDTH, SHOT_BITMAP_HEIGHT,
+			SHOT_WIDTH, SHOT_HEIGHT,
 			(RGB(255, 255, 255)));
 	}
 
@@ -432,9 +432,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.defenders[i].box.position.x, 
 			game.defenders[i].box.position.y, 
-			DEFENDER_BITMAP_WIDTH, DEFENDER_BITMAP_HEIGHT, 
+			DEFENDER_WIDTH, DEFENDER_HEIGHT, 
 			auxRenderDC, 0, 0, 
-			DEFENDER_BITMAP_WIDTH, DEFENDER_BITMAP_HEIGHT, 
+			DEFENDER_WIDTH, DEFENDER_HEIGHT, 
 			(RGB(255, 255, 255)));
 
 	}
@@ -457,9 +457,9 @@ int renderLocalMap(ClientData data, Game game)
 		GdiTransparentBlt(data.memDC, 
 			game.shields[i].box.position.x, 
 			game.shields[i].box.position.y, 
-			SHIELD_BITMAP_WIDTH, SHIELD_BITMAP_HEIGHT,
+			SHIELD_WIDTH, SHIELD_HEIGHT,
 			auxRenderDC, 0, 0, 
-			SHIELD_BITMAP_WIDTH, SHIELD_BITMAP_HEIGHT,
+			SHIELD_WIDTH, SHIELD_HEIGHT,
 			(RGB(255, 255, 255)));
 
 	}

@@ -3,10 +3,10 @@
 #include "resource.h"
 #include "Common.h"
 
-#define RENDER_MAP_TIME					40
+#define RENDER_MAP_TIME		40
 
 
-#define MAX_LOADSTRING 100
+#define MAX_LOADSTRING		100
 
 // Global Variables:
 HINSTANCE hInst;                                // current instance
