@@ -41,7 +41,7 @@
 #define SHIELD_SPACING			50
 
 
-void setupGame(ExtGame * sharedGame);
+void setupGame(Game * sharedGame);
 
 DWORD WINAPI moveBasicShips(LPVOID in);
 DWORD WINAPI moveElusiveShips(LPVOID in);
@@ -51,7 +51,7 @@ DWORD WINAPI powerupThread(LPVOID in);
 DWORD WINAPI moveShots(LPVOID in);
 
 typedef struct ThreadGames{
-	ExtGame * game;
-	ExtGame * gameShared;
+	Game * game;
+	Game * gameShared;
 	
 } ThreadGames;

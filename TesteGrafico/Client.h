@@ -3,6 +3,9 @@
 #include "resource.h"
 #include "Common.h"
 
+#define RENDER_MAP_TIME					40
+
+
 #define MAX_LOADSTRING 100
 
 // Global Variables:
@@ -63,7 +66,7 @@ int LoadClientBitmaps(ClientData data);
 
 
 typedef struct ThreadGames {
-	ExtGame * game;
-	ExtGame * gameShared;
+	Game * game;
+	Game * gameShared;
 
 } ThreadGames;

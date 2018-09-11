@@ -6,16 +6,16 @@
 
 DWORD WINAPI serverMain(LPVOID in)
 {
-	ExtGame *sharedGame = (ExtGame *)in;
+	Game *sharedGame = (Game *)in;
 	setupGame(sharedGame);
 
 
 	return 0;
 }
 
-void setupGame(ExtGame * gameShared)
+void setupGame(Game * gameShared)
 {
-	ExtGame game;
+	Game game;
 
 
 	game.nDefenders = MAX_DEFENDERS;
@@ -28,7 +28,7 @@ void setupGame(ExtGame * gameShared)
 
 	for (unsigned int i = 0; i < game.nBasicInvaders; i++)
 	{
-		ExtBasicInvader nave;
+		BasicInvader nave;
 
 		nave.box.dimension.width = BASIC_INVADER_BITMAP_WIDTH;
 		nave.box.dimension.height = BASIC_INVADER_BITMAP_HEIGHT;
@@ -45,7 +45,7 @@ void setupGame(ExtGame * gameShared)
 
 	for (unsigned int i = 0; i < game.nElusiveInvaders; i++)
 	{
-		ExtElusiveInvader nave;
+		ElusiveInvader nave;
 
 		nave.box.dimension.width = ELUSIVE_INVADER_BITMAP_WIDTH;
 		nave.box.dimension.height = ELUSIVE_INVADER_BITMAP_HEIGHT;
@@ -64,7 +64,7 @@ void setupGame(ExtGame * gameShared)
 
 	for (unsigned int i = 0; i < game.nDefenders; i++)
 	{
-		ExtDefender defender;
+		Defender defender;
 
 		defender.box.dimension.width = DEFENDER_BITMAP_WIDTH;
 		defender.box.dimension.height = DEFENDER_BITMAP_HEIGHT;
@@ -80,7 +80,7 @@ void setupGame(ExtGame * gameShared)
 
 	for (unsigned int i = 0; i < game.nShields; i++)
 	{
-		ExtShield shield;
+		Shield shield;
 
 		shield.box.dimension.width = SHIELD_BITMAP_WIDTH;
 		shield.box.dimension.height = SHIELD_BITMAP_HEIGHT;
@@ -91,7 +91,7 @@ void setupGame(ExtGame * gameShared)
 		game.shields[i] = shield;
 	}
 
-	CopyMemory(gameShared, &game, sizeof(ExtGame));
+	CopyMemory(gameShared, &game, sizeof(Game));
 
 	ThreadGames threadGames;
 	threadGames.gameShared = gameShared;
@@ -114,8 +114,8 @@ void setupGame(ExtGame * gameShared)
 DWORD WINAPI moveBasicShips(LPVOID in)
 {
 	ThreadGames *threadGames = (ThreadGames *)in;
-	ExtGame *game = threadGames->game;
-	ExtGame *gameShared = threadGames->gameShared;
+	Game *game = threadGames->game;
+	Game *gameShared = threadGames->gameShared;
 
 	while (1) {
 
@@ -178,7 +178,7 @@ DWORD WINAPI moveBasicShips(LPVOID in)
 			}
 
 		}
-		CopyMemory(gameShared, game, sizeof(ExtGame));
+		CopyMemory(gameShared, game, sizeof(Game));
 
 		Sleep(BASIC_INVADERS_SPEED);
 	}
@@ -189,8 +189,8 @@ DWORD WINAPI moveElusiveShips(LPVOID in)
 {
 
 	ThreadGames *threadGames = (ThreadGames *)in;
-	ExtGame *game = threadGames->game;
-	ExtGame *gameShared = threadGames->gameShared;
+	Game *game = threadGames->game;
+	Game *gameShared = threadGames->gameShared;
 
 	while (1)
 	{
@@ -330,7 +330,7 @@ DWORD WINAPI moveElusiveShips(LPVOID in)
 			}
 		}
 
-		CopyMemory(gameShared, game, sizeof(ExtGame));
+		CopyMemory(gameShared, game, sizeof(Game));
 
 		Sleep(ELUSIVE_INVADERS_SPEED);
 	}
@@ -341,8 +341,8 @@ DWORD WINAPI powerupThread(LPVOID in)
 {
 
 	ThreadGames *threadGames = (ThreadGames *)in;
-	ExtGame *game = threadGames->game;
-	ExtGame *gameShared = threadGames->gameShared;
+	Game *game = threadGames->game;
+	Game *gameShared = threadGames->gameShared;
 
 	while (TRUE)
 	{
@@ -371,25 +371,25 @@ DWORD WINAPI powerupThread(LPVOID in)
 			else //if (pType >= 71 && pType <= 75) //rare
 				game->powerUp.type = LIFE;
 
-			CopyMemory(gameShared, game, sizeof(ExtGame));
+			CopyMemory(gameShared, game, sizeof(Game));
 
 			while (game->powerUp.box.position.y < LIM_BOTTOM)
 			{
 				Sleep(POWERUP_SPEED);
 				game->powerUp.box.position.y += STEP_ATT_Y;
 
-				CopyMemory(gameShared, game, sizeof(ExtGame));
+				CopyMemory(gameShared, game, sizeof(Game));
 			}
 
 			game->activePowerup = FALSE;
-			CopyMemory(gameShared, game, sizeof(ExtGame));
+			CopyMemory(gameShared, game, sizeof(Game));
 		}
 	}
 }
 
 DWORD WINAPI moveBombs(LPVOID in)
 {
-	//ExtGame *game = (ExtGame *)in;
+	//Game *game = (Game *)in;
 	//
 	//for (unsigned int i = 0; i < game->nBombs; i++)
 	//{
@@ -417,7 +417,7 @@ DWORD WINAPI moveBombs(LPVOID in)
 
 DWORD WINAPI moveShots(LPVOID in)
 {
-	ExtGame *game = (ExtGame *)in;
+	Game *game = (Game *)in;
 
 	/*while (1)
 	{

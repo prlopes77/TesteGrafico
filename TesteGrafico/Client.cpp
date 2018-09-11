@@ -5,7 +5,7 @@
 #include <winuser.h>
 
 
-ExtGame gameShared;
+Game gameShared;
 
 
 ClientData data;
@@ -311,7 +311,7 @@ int LoadClientBitmaps(ClientData data)
 }
 
 
-int renderLocalMap(ClientData data, ExtGame game)
+int renderLocalMap(ClientData data, Game game)
 {
 	HDC _hdc = GetDC(mainWindow);
 
@@ -474,13 +474,13 @@ int renderLocalMap(ClientData data, ExtGame game)
 DWORD WINAPI threadRenderMap(LPVOID * in)
 {
 	//ClientData *data = (ClientData *)in;
-	ExtGame game;
+	Game game;
 
 	while (TRUE)
 	{
 		Sleep(RENDER_MAP_TIME);
 
-		CopyMemory(&game, &gameShared, sizeof(ExtGame));
+		CopyMemory(&game, &gameShared, sizeof(Game));
 
 		renderLocalMap(data, game);
 	}

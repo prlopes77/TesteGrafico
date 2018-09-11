@@ -28,8 +28,6 @@
 #define SHIELD_BITMAP_WIDTH				100
 #define SHIELD_BITMAP_HEIGHT			50
 
-#define RENDER_MAP_TIME					40
-
 
 
 enum Direction {
@@ -76,64 +74,64 @@ typedef struct Box {
 	Dimension dimension;
 } Box;
 
-typedef struct ExtBasicInvader {
+typedef struct BasicInvader {
 	Box box;
 	Direction currentDirection;
 	Direction lastDirection;
 	Speed_T speed;
 	Speed_T fireRate;
 	Health_T lives;
-} ExtBasicInvader;
+} BasicInvader;
 
-typedef struct ExtElusiveInvader {
+typedef struct ElusiveInvader {
 	Box box;
 	Direction currentDirection;
 	Direction lastDirection;
 	Speed_T speed;
 	Speed_T fireRate;
 	Health_T lives;
-} ExtElusiveInvader;
+} ElusiveInvader;
 
-typedef struct ExtProjectile {
+typedef struct Projectile {
 	Box box;
 	Speed_T speed;
-} ExtProjectile;
+} Projectile;
 
-typedef struct ExtDefender {
+typedef struct Defender {
 	Box box;
 	PlayerId_T player;
 	Health_T lives;
 	Speed_T speed;
 	Speed_T fireRate;
-} ExtDefender;
+} Defender;
 
-typedef struct ExtShield {
+typedef struct Shield {
 	Box box;
 	Health_T lives;
-} ExtShield;
+} Shield;
 
-typedef struct ExtPowerUp {
+typedef struct PowerUp {
 	Box box;
 	unsigned int type;
 	Speed_T speed;
-} ExtPowerUp;
+} PowerUp;
 
-typedef struct ExtGame {
+typedef struct Game {
 	Dimension gameMapDimension;
 
-	ExtBasicInvader basicInvaders[MAX_BASIC_INVADERS];
+	BasicInvader basicInvaders[MAX_BASIC_INVADERS];
 	Count_T nBasicInvaders;
-	ExtElusiveInvader elusiveInvaders[MAX_ELUSIVE_INVADERS];
+	ElusiveInvader elusiveInvaders[MAX_ELUSIVE_INVADERS];
 	Count_T nElusiveInvaders;
-	ExtDefender defenders[MAX_DEFENDERS];
+	Defender defenders[MAX_DEFENDERS];
 	Count_T nDefenders;
-	ExtShield shields[MAX_SHIELDS];
+	Shield shields[MAX_SHIELDS];
 	Count_T nShields;
-	ExtPowerUp powerUp;
-	ExtProjectile shots[MAX_SHOTS];
+	PowerUp powerUp;
+	Projectile shots[MAX_SHOTS];
 	Count_T nShots;
-	ExtProjectile bombs[MAX_BOMBS];
+	Projectile bombs[MAX_BOMBS];
 	Count_T nBombs;
 
 	BOOL activePowerup;
-} ExtGame;
+} Game;
