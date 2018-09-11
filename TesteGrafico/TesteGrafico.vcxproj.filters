@@ -24,7 +24,16 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TesteGrafico.h">
+    <ClInclude Include="Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerBootstrap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +41,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TesteGrafico.cpp">
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -88,6 +100,21 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="img\defender.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\escudo100.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\escudo66.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\escudo33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\shot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="img\cleaner.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -143,19 +143,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="ServerBootstrap.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TesteGrafico.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Server.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TesteGrafico.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TesteGrafico.rc" />
@@ -167,12 +171,17 @@
     <Image Include="img\battery.bmp" />
     <Image Include="img\bitmap1.bmp" />
     <Image Include="img\bitmap2.bmp" />
+    <Image Include="img\cleaner.bmp" />
     <Image Include="img\defender.bmp" />
+    <Image Include="img\escudo100.bmp" />
+    <Image Include="img\escudo33.bmp" />
+    <Image Include="img\escudo66.bmp" />
     <Image Include="img\life.bmp" />
     <Image Include="img\nave.bmp" />
     <Image Include="img\naveElus.bmp" />
     <Image Include="img\projAtt.bmp" />
     <Image Include="img\shield-14.bmp" />
+    <Image Include="img\shot.bmp" />
     <Image Include="img\snowflake.bmp" />
     <Image Include="img\velocity.bmp" />
     <Image Include="small.ico" />
