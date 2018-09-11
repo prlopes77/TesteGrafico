@@ -13,6 +13,7 @@ WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
 
 HWND mainWindow;
 
+int screenWidth, screenHeight; //screen size
 
 //Structures
 typedef struct allBitmaps {

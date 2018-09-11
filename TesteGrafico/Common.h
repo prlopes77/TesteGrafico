@@ -31,7 +31,6 @@
 #define RENDER_MAP_TIME					40
 
 
-int screenWidth, screenHeight; //screen size
 
 enum Direction {
 	Up,
